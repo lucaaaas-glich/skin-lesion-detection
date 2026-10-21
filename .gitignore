@@ -1,0 +1,10 @@
+.venv*/
+__pycache__/
+*.py[cod]
+.env
+.DS_Store
+data/
+weights/
+outputs/
+*.pt
+*.csv

@@ -1,0 +1,129 @@
+{
+  "purpose": "Portfolio snapshot of the existing experiment implementation; source code is copied without behavioral changes.",
+  "files": [
+    {
+      "path": "modules.py",
+      "sha256": "0af074132a4d7f5b323d9df7a2c25f7c4270f02aea64604fcda0cd59f993a359"
+    },
+    {
+      "path": "dataset.py",
+      "sha256": "bcb250fa5617d6ffbc027ec63870131a0326b9c9598a94f53a4c45b753f33288"
+    },
+    {
+      "path": "preprocessing.py",
+      "sha256": "c86006c777015ab93f6be34acba442948cc20dd45a42fbcdecf0ff39addb1091"
+    },
+    {
+      "path": "transfer.py",
+      "sha256": "3ed2db92921607e6960926d860ef9d7ec651742a0d98809a52213387cfa982a1"
+    },
+    {
+      "path": "schedule.py",
+      "sha256": "ce34bc2a19979375b6d24bd255ef339ba74b644f23abfc15d9fac5aa2e1891df"
+    },
+    {
+      "path": "checkpoints.py",
+      "sha256": "fa6ab2849ab87ce562d22f7e2c3d09fa9a528bdabc06f63adc75f2b0105143c9"
+    },
+    {
+      "path": "evaluation.py",
+      "sha256": "b123d75f1862ebcfae45d0eedbdb19c80628ec5e26608081b838a7a4236b204e"
+    },
+    {
+      "path": "runtime.py",
+      "sha256": "e2d2696e8c8dcedfe610929a5b24d586e1d69b480189cbc79f311f0d39057ee4"
+    },
+    {
+      "path": "train.py",
+      "sha256": "4f835b8465674828e5f49cd2fe454ae10db4cf91a786fbff477ef3c21f3e35ed"
+    },
+    {
+      "path": "predict.py",
+      "sha256": "f46dd8d4013805e06837ac3a8115fdce88888b956e9d69db872a25e52a0bf20f"
+    },
+    {
+      "path": "prepare_dataset.py",
+      "sha256": "11af3363d41b02fe9233d377a7b7941d0343bef15e9506fbadcd671937bde295"
+    },
+    {
+      "path": "plan_group_splits.py",
+      "sha256": "a86a9d45b72808f84ae41b669fd9a734e3936763664748e4b65ac6932baa97f3"
+    },
+    {
+      "path": "fetch_weights.py",
+      "sha256": "5603c6081675b0b8d0362d245fceeb11c154e11bbf7c38d22ab95567b39e1976"
+    },
+    {
+      "path": "preflight.py",
+      "sha256": "ecf2af12d3a6423d53d102f9b28654467d7f42ea6be80992f996bdaf568b7eb3"
+    },
+    {
+      "path": "audit_initialization.py",
+      "sha256": "844c2f5224295e74d999054f574727246c5323d49cbfe6071ad49bfd12be1b60"
+    },
+    {
+      "path": "audit_real_inputs.py",
+      "sha256": "4dd080daf1fa167f8fa39adb4493725157cf103c9445db0fc6a8e3385db9a397"
+    },
+    {
+      "path": "benchmark_inference.py",
+      "sha256": "6d6d72fa4fe54677890229bc6ae8e97a73e3e9ba00bec046c1e3062ca028c8a3"
+    },
+    {
+      "path": "smoke_test.py",
+      "sha256": "c1543e4e7fd11f8bb024279cf9107d55d11cb6eb8129f7a1315a97a747a6f1ca"
+    },
+    {
+      "path": "test_plan_group_splits.py",
+      "sha256": "96a9f82b2109f9d1089b820d79f39c23cc70e9807c62dacc499986ea0cd5e494"
+    },
+    {
+      "path": "test_checkpoints.py",
+      "sha256": "a463fa76dee9791a4290b7190368c1ec001e2bf58aac0760f243b81102a5258c"
+    },
+    {
+      "path": "test_preflight.py",
+      "sha256": "e8b61addbbcbf8940fd9943bd82eae1b233b9922222206230b0d2ed507fe7c1c"
+    },
+    {
+      "path": "test_schedule.py",
+      "sha256": "ac1ffee2c3bc27a4df541f59a480e5e6b99333026fb4850b9cfda45ba4b5b78d"
+    },
+    {
+      "path": "test_preprocessing.py",
+      "sha256": "bbb215bf1466be7b179ff499afd558916a5a70a8bcd54b81939868f67882d564"
+    },
+    {
+      "path": "test_prepare_dataset.py",
+      "sha256": "073c92895dd9bd2eebeccad074c7bb687262c116f6441ca3b4b390381de0cca6"
+    },
+    {
+      "path": "test_transfer.py",
+      "sha256": "fc5b3aecf1e633bdd65d831005f7509a41af987545dbb3d8eb940e9b79e8dfdd"
+    },
+    {
+      "path": "test_runtime_pipeline.py",
+      "sha256": "2ece3cd6be211c4c5cd3363f2feae9c85317ea967addad8e5f45323af4be2a4b"
+    },
+    {
+      "path": "weights_registry.json",
+      "sha256": "6226043ae7d30da8672e8ad174da011441c2c05f5099dc57642ee3b83b9bc290"
+    },
+    {
+      "path": "experiment.json",
+      "sha256": "7890293787b98902cadcf62878abd9e8f8c7396598f132e9437b590fe1650a5d"
+    },
+    {
+      "path": "experiment_provisional.json",
+      "sha256": "b304d0a6b69df04ef1fae4ecd9dda5a0beca7020cd8ff8c72c589535b960857d"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "85ab7383b119a5d373f1452a112438119b260d2cda221233e2dd810fd7e8396c"
+    },
+    {
+      "path": "requirements-linux-a100.lock.txt",
+      "sha256": "6bf18ff5d2c3e17a34c6c99a597bc5e168716cc61a0171a34d6055aa0c8f222f"
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "version": "known-lesion-comparison-v2-draft",
+  "status": "draft_before_teacher_reply",
+  "purpose": "known_lesion_supplementary_experiment",
+  "ready_for_full_training": false,
+  "classes": {
+    "0": "Benign",
+    "1": "Malignant"
+  },
+  "models": {
+    "n": {
+      "file": "yolov8n.pt",
+      "url": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8n.pt",
+      "sha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36"
+    },
+    "s": {
+      "file": "yolov8s.pt",
+      "url": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s.pt",
+      "sha256": "1f47a78bf100391c2a140b7ac73a1caae18c32779be7d310658112f7ac9aa78a"
+    }
+  },
+  "model_policy": "YOLOv8n is the predeclared primary; YOLOv8s is the comparator, not a result-selected replacement",
+  "manifest_sha256": {
+    "train": "8528722216b67d62078fe32632cb64128149053cc41ece6daec7399369126fca",
+    "val": "a4f6b6e9d8c7bbb476353f6789ec9e4d9170018564d04c70b855a2b10a125ff3",
+    "reassessment": "5264555d5de0ee5cbaa5b69e090d0b6e24c907b4efd50acc69cc32afd35a8df6"
+  },
+  "split_class_counts": {
+    "train": {
+      "Benign": 576,
+      "Malignant": 192
+    },
+    "val": {
+      "Benign": 124,
+      "Malignant": 41
+    },
+    "reassessment": {
+      "Benign": 124,
+      "Malignant": 41
+    }
+  },
+  "train": {
+    "epochs": 60,
+    "imgsz": 640,
+    "batch": 16,
+    "nbs": 16,
+    "seed": 3710,
+    "deterministic": true,
+    "amp": false,
+    "optimizer": "AdamW",
+    "lr0": 0.001,
+    "lrf": 0.01,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "cos_lr": false,
+    "warmup_epochs": 3.0,
+    "warmup_momentum": 0.8,
+    "warmup_bias_lr": 0.0,
+    "patience": 0,
+    "mosaic": 0.0,
+    "close_mosaic": 0,
+    "mixup": 0.0,
+    "cutmix": 0.0,
+    "copy_paste": 0.0,
+    "degrees": 0.0,
+    "translate": 0.0,
+    "scale": 0.0,
+    "shear": 0.0,
+    "perspective": 0.0,
+    "hsv_h": 0.0,
+    "hsv_s": 0.0,
+    "hsv_v": 0.0,
+    "flipud": 0.5,
+    "fliplr": 0.5,
+    "bgr": 0.0,
+    "multi_scale": false,
+    "rect": false,
+    "cache": false,
+    "workers": 4,
+    "fraction": 1.0,
+    "freeze": null,
+    "box": 7.5,
+    "cls": 0.5,
+    "dfl": 1.5,
+    "single_cls": false,
+    "resume": false,
+    "pretrained": true,
+    "val": true,
+    "save": true,
+    "save_period": -1,
+    "plots": true,
+    "compile": false,
+    "verbose": false
+  },
+  "checkpoint_selection": "best.pt by maximum validation macro mAP50:95 over the fixed 60 epochs; upstream later epoch wins exact ties",
+  "evaluation": {
+    "score_floor": 0.001,
+    "nms_iou": 0.7,
+    "max_det": 300,
+    "multi_label": false,
+    "agnostic_nms": false,
+    "match_iou": 0.5,
+    "threshold_grid": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95
+    ],
+    "benign_false_alert_budget": 0.1,
+    "budget_rationale": "Predeclared classroom comparison budget, not a clinically justified acceptable rate",
+    "selection_rule": "Maximize malignant detection recall within benign image false-alert budget; ties: precision, fewer benign alerts, higher threshold",
+    "fresh_blind_test": false,
+    "reassessment_threshold_sweep": false,
+    "preprocessing": "single_letterbox_v1"
+  },
+  "decisions_pending": [
+    "Teacher acceptance of restricted cohort/grouping",
+    "Third-party model component packaging",
+    "IoU target denominator",
+    "Feasibility check-off and current deadline"
+  ],
+  "design_notes": [
+    "60 epochs is a fixed budget, not a convergence claim",
+    "No oversampling; no Mosaic/mixup/cutmix; flips only, preserve color and lesion context",
+    "Optional Albumentations removed from runtime transform list",
+    "No n/s comparison to old cohort as a causal improvement claim",
+    "Equal batch/nbs prevents different gradient accumulation budgets",
+    "No training or validation uses reassessment images"
+  ]
+}
